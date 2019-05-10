@@ -93,10 +93,12 @@ SCENARIO("PC2 POO2")
             std::cerr << "Unable to open file "<< SEARCH_FILE;
             exit(1);
         }
+        std::vector<std::string> text;
         std::string current_line;
         while (inFile >> current_line)
-            arena2.load_fights(current_line);
+            text.push_back(current_line);
 
+//        arena2.load_fights(text);
 
         WHEN("Running all fights")
         {
